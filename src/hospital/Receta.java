@@ -14,7 +14,7 @@ public class Receta {
 
     //Constructor
 
-    public Receta(int id, Paciente paciente, Profesional, Estudio[] estudio){
+    public Receta(int id, Paciente paciente, Profesional profesional, Estudio[] estudio){
         this.id = id;
         this.paciente = paciente;
         this.profesional = profesional;
@@ -28,7 +28,7 @@ public class Receta {
         if(estado == Estado.PROCESADA){
             return true;
         }
-        return false
+        return false;
     }
 
     public void procesar() {
@@ -50,11 +50,11 @@ public class Receta {
     @Override
 
     public String toString() {
-        String salida = + "Receta" + id +
+        String salida =  "Receta" + id +
                 "\n- Profesional: " + profesional +
                 "\n- Paciente: " + paciente +
                 "\n- Estado: " + estado +
-                "\n- Estudios: " estudios;
+                "\n- Estudios: " + estudios;
         for(Estudio e : estudios){
             salida += e.toString();
         }

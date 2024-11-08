@@ -1,6 +1,10 @@
 package hospital;
 
 import hospital.estudios.Estudio;
+import hospital.estudios.EstudioLaboratorio;
+import hospital.estudios.EstudioRX;
+import hospital.usuarios.Paciente;
+import hospital.usuarios.Profesional;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -12,7 +16,7 @@ public class Main {
 
         Profesional juana = hospital.registrarProfesional("Juana", 12345);
         Profesional ana = hospital.registrarProfesional("Ana",11234);
-        Profesional maria = hospital.refistrarProfesional("Maria",54321);
+        Profesional maria = hospital.registrarProfesional("Maria",54321);
 
         // Pacientes
 

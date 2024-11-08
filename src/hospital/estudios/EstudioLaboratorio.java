@@ -6,10 +6,10 @@ public class EstudioLaboratorio extends Estudio {
 
     private int cantItems;
 
-    //metodos
+    //Constructor
 
     public EstudioLaboratorio(int cantItems){
-        super("nombre laboratorio", "Estudio de laboratorio");
+        super("nombre laboratorio", "Estudio de laboratorio", Estado.PENDIENTE);
         this.cantItems = cantItems;
     }
 

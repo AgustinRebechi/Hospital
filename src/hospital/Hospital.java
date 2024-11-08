@@ -71,6 +71,7 @@ public class Hospital {
             }
         }
         return false;
+    }
 
     private boolean pacienteRegistrado(int dni){
         Boolean encontrado = false;
@@ -96,11 +97,9 @@ public class Hospital {
 
     public void procesar(Receta receta) {
         if (receta.estaProcesada()){
-            throw new SystemException("la receta ya esta procesada")
+            throw new SystemException("la receta ya esta procesada");
         }
         receta.procesar();
-
-
     }
 
     public void mostrarRecetas() {
@@ -126,9 +125,9 @@ public class Hospital {
 
     private List<Paciente> pacientesConEstudios(int cantMinima){
         Map<Integer, Integer> pacientesConEstudios = pacientesEstudios();
-        List<Paciente> pacientesConEstudiosCant = ArrayList<>();
+        List<Paciente> pacientesConEstudiosCant = new ArrayList<>();
 
-        for(Map.Entry<Integer, Integer> entrada : pacientesEstudios().entrySet()){
+        for (Map.Entry<Integer, Integer> entrada : pacientesEstudios().entrySet()){
             if(entrada.getValue() >= cantMinima) {
                 Paciente p = getPacienteByDni(entrada.getKey());
                 pacientesConEstudiosCant.add(p);
@@ -139,7 +138,7 @@ public class Hospital {
     }
 
     private Paciente getPacienteByDni(int dni) {
-        for(Paciente p : paciente) {
+        for(Paciente p : pacientes) {
             if(p.getDni() == dni) {
                 return p;
             }
@@ -150,7 +149,7 @@ public class Hospital {
     private Map<Integer, Integer> pacientesEstudios(){
         Map<Integer, Integer> pacientesEstudios = new HashMap<>();
         for(Receta r : recetas){
-            Integer pacienteDni = r.getPaciente().getDni;
+            Integer pacienteDni = r.getPaciente().getDni();
             Integer cantEstudios = r.cantidadEstudios();
             if(pacientesEstudios.containsKey(pacienteDni)){
                 pacientesEstudios.put(pacienteDni, 0);

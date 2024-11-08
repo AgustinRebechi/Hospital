@@ -1,5 +1,6 @@
-import estudios.Estudio;
-import hospital.Receta;
+package hospital;
+
+import hospital.estudios.Estudio;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -55,7 +56,7 @@ public class Main {
         hospital.mostrarRecetas();
         // Mostrar recetas procesadas
         hospital.mostrarRecetasProcesadas();
-        // Mostrar pacientes con al menos 2 estudios realizados
+        // Mostrar pacientes con al menos 2 hospital.estudios realizados
         hospital.mostrarPacientesConEstudios(3);
 
     }

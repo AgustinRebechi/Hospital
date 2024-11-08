@@ -1,4 +1,10 @@
 package hospital.usuarios;
 
-public class Usuario {
+public abstract class  Usuario {
+
+    public String nombre;
+
+    public Usuario(String nombre) {
+        this.nombre = nombre;
+    }
 }
